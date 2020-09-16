@@ -1,0 +1,88 @@
+* {
+  text-align: left;
+  margin: 0;
+}
+
+#root {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+#root #inner {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 640px;
+  background: #444;
+  color: #ddd;
+}
+#root #sectionsContainer {
+  width: 250px;
+  max-width: 27%;
+  background-color: #767e81;
+  color: #ddd;
+}
+#root #sectionsContainer .sectionTitle {
+  cursor: pointer;
+  text-align: left;
+  padding: 40px;
+}
+#root #sectionsContainer .sectionTitle:hover {
+  background-color: #626d71;
+}
+#root #sectionsContainer .sectionTitle.active {
+  background-color: #383a46;
+}
+#root #sectionsContainer .sectionContent {
+  display: none;
+}
+#root #tabularContentContainer {
+  width: 100%;
+  padding: 60px;
+  box-sizing: border-box;
+}
+#root #tabularContentContainer * {
+  margin: 15px;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #root #inner {
+    max-width: 85%;
+  }
+  #root #inner #sectionsContainer {
+    width: 100%;
+    max-width: unset;
+  }
+  #root #inner #sectionsContainer .sectionTitle:after {
+    content: "+";
+    float: right;
+  }
+  #root #inner #sectionsContainer .sectionTitle.active {
+    background-color: #383a46;
+  }
+  #root #inner #sectionsContainer .sectionTitle.active:after {
+    content: "-";
+  }
+  #root #inner #sectionsContainer .sectionContent {
+    display: initial;
+  }
+  #root #inner #sectionsContainer .sectionContent .contentInner {
+    transition: max-height 0.4s ease;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #4f515f;
+  }
+  #root #inner #sectionsContainer .sectionContent .contentInner * {
+    margin: 20px;
+  }
+  #root #inner #tabularContentContainer {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

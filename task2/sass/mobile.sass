@@ -1,0 +1,47 @@
+$bg-colour: #444
+$main-colour: #ddd
+$tab-bg-colour: #767e81
+$tab-hover-colour: #626d71
+$tab-selected-colour: #383a46
+$content-bg-colour: #4f515f
+
+// Above colours repeated not very DRY but my preprocessor didn't want to let me have a colours.sass file for some reason.
+
+@media screen and (max-width: 768px)
+
+    #root
+
+        #inner
+            max-width: 85%
+
+            #sectionsContainer
+
+                width: 100%
+                max-width: unset
+
+                .sectionTitle
+                    &:after
+                        content: '+'
+                        float: right
+
+                .sectionTitle.active
+                    background-color: $tab-selected-colour
+
+                    &:after
+                        content: '-'
+
+                .sectionContent
+                    display: initial
+
+                    .contentInner
+                        transition: max-height .4s ease
+                        display: block
+                        max-height: 0
+                        overflow: hidden
+                        background-color: $content-bg-colour
+
+                        *
+                            margin: 20px
+            
+            #tabularContentContainer
+                display: none

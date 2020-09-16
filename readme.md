@@ -1,40 +1,22 @@
-Introduction
+Thank you for the chance to apply, I dearly hope it looks the same on your machine as it did on mine.
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
-
-Exercise 1
+# Excercise 1
 ---
-Build a responsive page based on the designs.
+### dependencies and commands
+#### SASS
+Install here: [https://sass-lang.com/install](https://sass-lang.com/install)
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+To compile the sass run:
+    sudo sass sass/style.sass css/style.css
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+If you want to play around with the sass files with hot reloading:
+    sudo sass --watch style.sass css/style.css
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
 
 Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+### dependencies and commands
+Same as above, run commands from within task2 folder
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+The reason ('b' + 'a' + + 'a' + 'a').toLowerCase() returns 'banana' is because 'b' + expects a string to concat to 'b' but receives +'a' which JavaScript is attempting to convert into a number when it sees the extra plus sign ( unary plus operator ) before the operand of 'a', this fails to return a number and instead returns NaN ( Not A Number ) which when converted to lower case becomes 'nan', so 'b'+'a'+'nan'+'a' = 'banana' :) 

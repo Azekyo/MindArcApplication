@@ -1,0 +1,57 @@
+$bg-colour: #444
+$main-colour: #ddd
+$tab-bg-colour: #767e81
+$tab-hover-colour: #626d71
+$tab-selected-colour: #383a46
+$content-bg-colour: #4f515f
+
+*
+    text-align: left
+    margin: 0
+
+#root
+    font-family: sans-serif
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+    min-height: 100vh
+
+    #inner
+        display: flex
+        align-items: center
+        width: 80%
+        max-width: 640px
+        background: $bg-colour
+        color: $main-colour
+
+    #sectionsContainer
+        width: 250px
+        max-width: 27%
+        background-color: $tab-bg-colour
+        color: $main-colour
+
+        .sectionTitle
+            cursor: pointer
+            text-align: left
+            padding: 40px
+            
+            &:hover
+                background-color: $tab-hover-colour
+
+            &.active
+                background-color: $tab-selected-colour
+
+        .sectionContent
+            display: none
+    
+    #tabularContentContainer
+        width: 100%
+        padding: 60px
+        box-sizing: border-box
+
+        * 
+            margin: 15px
+            padding-left: 0
