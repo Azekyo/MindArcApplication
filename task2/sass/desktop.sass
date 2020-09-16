@@ -1,15 +1,11 @@
-$bg-colour: #444
-$main-colour: #ddd
-$tab-bg-colour: #767e81
-$tab-hover-colour: #626d71
-$tab-selected-colour: #383a46
-$content-bg-colour: #4f515f
+@use 'colours' as c
 
 *
     text-align: left
     margin: 0
 
 #root
+
     font-family: sans-serif
 
     display: flex
@@ -24,14 +20,15 @@ $content-bg-colour: #4f515f
         align-items: center
         width: 80%
         max-width: 640px
-        background: $bg-colour
-        color: $main-colour
+        background: c.$bg-colour
+        color: c.$main-colour
+        border-radius: 4px
 
     #sectionsContainer
         width: 250px
         max-width: 27%
-        background-color: $tab-bg-colour
-        color: $main-colour
+        background-color: c.$tab-bg-colour
+        color: c.$main-colour
 
         .sectionTitle
             cursor: pointer
@@ -39,10 +36,10 @@ $content-bg-colour: #4f515f
             padding: 40px
             
             &:hover
-                background-color: $tab-hover-colour
+                background-color: c.$tab-hover-colour
 
             &.active
-                background-color: $tab-selected-colour
+                background-color: c.$tab-selected-colour
 
         .sectionContent
             display: none

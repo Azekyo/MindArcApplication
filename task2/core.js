@@ -23,6 +23,7 @@ let testJSON = [
 
     document.getElementById('tabularContentContainer').innerHTML += testJSON[0].content;
 
+
     function showContent(e){
 
       Array.from(document.getElementsByClassName('sectionTitle')).forEach(function(e){
@@ -69,3 +70,6 @@ let testJSON = [
   })
 
   document.getElementById('sectionsContainer').innerHTML += generatedHTML;
+
+
+  showContent(0)

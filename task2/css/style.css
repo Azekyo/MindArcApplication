@@ -18,6 +18,7 @@
   max-width: 640px;
   background: #444;
   color: #ddd;
+  border-radius: 4px;
 }
 #root #sectionsContainer {
   width: 250px;
